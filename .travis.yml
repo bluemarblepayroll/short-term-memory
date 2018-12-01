@@ -8,3 +8,7 @@ script:
 - yarn run lint
 - yarn run test
 cache: yarn
+notifications:
+  hipchat:
+    rooms:
+      secure: CZEdzrr4Xd2ieUC49x4bhrXFd/kGb9hbWfRl7v8MqwGkQTLzjfIu4poDYhaEY7FHhC6Mrsg41lsFXnDDeqxdJjaV/Up0zjm07l+ghU32Qft7QWCnSeDkHci3mJQd/AHm9abK/7synMPiqnWJe8S20QfTmEH0iOMeVTrzLGuqt/k9HPMyAaHk7j5hNPAyEDkO7HMS2xkSYzeN83bwcLF/ku9SsdR6Va4AQaqePuwsa3Ek5kYSyepjaJzaZYSMAcL2BGSJ9unU2urIZ/yznTq7Y5VY14dBMiUNmoKCiXWJYnm+npse914WkvzGZ57TDt5PoPIux0+yY/t+XMqbhuWyqCL8yiq7tfVAtYepf0Qfa9Yw89pSTA3rOwgh+8vsi4/WJqYoMvty776LFbk/p/E2pl0FKOf1WE3eT+DON/NJRkXuhh4E+J7lkKEFzWWAJpoPpCg9c0tu6WxYjfuK7dhCq1IW0hYFqVEbJqIneBtIxhWWwCH84998LVA/1enzR8ACb0FgQwMPA/iqRGWnM517rI3Xr4ToLOcccWieZE5Vf8Ady4jB5/Z4sYYSti3m1fPE24fZbl/S02e1qvz5D2akwPWNtF3CLA+1H9XIMzidTyy85+sSbS8GVn/dpR8QUHtv+rYgPDs+MSUMx1sZ2d2rS6UlbKgX68YiRuPtwJbl7Bc=

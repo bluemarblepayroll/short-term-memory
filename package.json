@@ -1,0 +1,50 @@
+{
+  "name": "@bluemarblepayroll/short-term-memory",
+  "version": "2.0.0",
+  "description": "Isomorphic Session Storage",
+  "main": "./dist/store.js",
+  "typings": "./dist/store.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=8.11.3"
+  },
+  "contributors": [
+    "Matthew Ruggio <mruggio@bluemarblepayroll.com>"
+  ],
+  "keywords": [
+    "short-term-memory",
+    "sessionStorage",
+    "session storage",
+    "session store",
+    "local storage",
+    "local store"
+  ],
+  "scripts": {
+    "test": "mocha -r ts-node/register --reporter spec test/**/*.spec.ts",
+    "build": "tsc",
+    "start": "tsc -w",
+    "lint": "tslint -c tslint.json '{lib,test}/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bluemarblepayroll/short-term-memory"
+  },
+  "bugs": {
+    "url": "https://github.com/bluemarblepayroll/short-term-memory/issues"
+  },
+  "author": "Blue Marble Payroll, LLC",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/bluemarble-ondemand/short-term-memory",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  }
+}

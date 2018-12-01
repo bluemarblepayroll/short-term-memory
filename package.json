@@ -2,8 +2,8 @@
   "name": "@bluemarblepayroll/short-term-memory",
   "version": "2.0.0",
   "description": "Isomorphic Session Storage",
-  "main": "./dist/store.js",
-  "typings": "./dist/store.d.ts",
+  "main": "./dist/storage_manager.js",
+  "typings": "./dist/storage_manager.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -23,10 +23,11 @@
     "local store"
   ],
   "scripts": {
-    "test": "mocha -r ts-node/register --reporter spec test/**/*.spec.ts",
-    "build": "tsc",
+    "build": "rm -rf dist/* && tsc",
+    "clean": "rm -rf dist/*",
+    "lint": "tslint -c tslint.json '{lib,test}/**/*.ts'",
     "start": "tsc -w",
-    "lint": "tslint -c tslint.json '{lib,test}/**/*.ts'"
+    "test": "mocha -r ts-node/register --reporter spec test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",

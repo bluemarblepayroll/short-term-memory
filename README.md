@@ -4,9 +4,9 @@
 
 [![Build Status](https://travis-ci.org/bluemarblepayroll/short-term-memory.svg?branch=master)](https://travis-ci.org/bluemarblepayroll/short-term-memory)
 
+Very small library that places a layer of abstraction over the browsers built in [Session Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).  This means you can program to this library and it will ensure you do not make any hard links between your application and the browser.  When this is ran outside of a browser then it will polyfill the storage with an in-memory key-value store.
 
-
-
+Note that this library only deals with short-lived storage (Session Storage) and does not currently deal with longer term storage (i.e. Local Storage).
 
 ## Installation
 
@@ -25,6 +25,51 @@ yarn add @bluemarblepayroll/short-term-memory
 ````
 
 ## Examples
+
+The Store API is meant to implement the main SessionStorage API methods:
+
+1. getItem
+2. setItem
+3. removeItem
+4. clear
+
+The other methods, such as key and length, were purposely omitted from the initial implementation.  These methods can be added later should the need arise.
+
+### Storing & Retrieving Values
+
+```
+import StorageManager from "@bluemarblepayroll/short-term-memory";
+
+StorageManager.setItem('Iron Man', 'Tony Stark');
+
+let ironMansName = StorageManager.getItem('Iron Man'); // returns 'Tony Stark'
+```
+
+### Removing Values
+
+```
+import StorageManager from "@bluemarblepayroll/short-term-memory";
+
+StorageManager.setItem('Iron Man', 'Tony Stark');
+
+StorageManager.removeItem('Iron Man');
+
+let ironMansName = StorageManager.getItem('Iron Man'); // returns null
+```
+
+### Clearing
+
+```
+import StorageManager from "@bluemarblepayroll/short-term-memory";
+
+StorageManager.setItem('Iron Man', 'Tony Stark');
+StorageManager.setItem('Hulk', 'Bruce Banner');
+
+StorageManager.clear();
+
+let ironMansName = StorageManager.getItem('Iron Man'); // returns null
+let hulksName = StorageManager.getItem('Hulk'); // returns null
+```
 
 ## Contributing
 

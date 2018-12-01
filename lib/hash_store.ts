@@ -14,7 +14,7 @@ export class HashStore implements IStore {
     this.clear();
   }
 
-  // Return null, not undefined in order to be consistent with localStorage API.
+  // Return null instead of undefined in order to be consistent with localStorage API.
   public getItem(key: string): string {
     return this.hash[key] || null;
   }

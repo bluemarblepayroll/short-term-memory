@@ -6,41 +6,41 @@
  */
 
 import { expect } from "chai";
-import { clear, getItem, removeItem, setItem } from "../lib/store";
+import StorageManager from "../lib/storage_manager";
 
 describe("when running without global window object", () => {
   it("should get and set key value entries", () => {
     const key = "Name";
     const value = "Frankie Two Times";
 
-    setItem(key, value);
+    StorageManager.setItem(key, value);
 
-    expect(getItem(key)).to.equal(value);
+    expect(StorageManager.getItem(key)).to.equal(value);
   });
 
   it("should remove individual entries", () => {
     const key = "Name";
     const value = "Frankie Two Times";
 
-    setItem(key, value);
+    StorageManager.setItem(key, value);
 
-    expect(getItem(key)).to.equal(value);
+    expect(StorageManager.getItem(key)).to.equal(value);
 
-    removeItem(key);
+    StorageManager.removeItem(key);
 
-    expect(getItem(key)).to.equal(null);
+    expect(StorageManager.getItem(key)).to.equal(null);
   });
 
   it("should clear all entries", () => {
     const key = "Name";
     const value = "Frankie Two Times";
 
-    setItem(key, value);
+    StorageManager.setItem(key, value);
 
-    expect(getItem(key)).to.equal(value);
+    expect(StorageManager.getItem(key)).to.equal(value);
 
-    clear();
+    StorageManager.clear();
 
-    expect(getItem(key)).to.equal(null);
+    expect(StorageManager.getItem(key)).to.equal(null);
   });
 });

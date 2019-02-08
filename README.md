@@ -2,7 +2,7 @@
 
 **Isomorphic Session Storage**
 
-[![Build Status](https://travis-ci.org/bluemarblepayroll/short-term-memory.svg?branch=master)](https://travis-ci.org/bluemarblepayroll/short-term-memory)
+[![npm version](https://badge.fury.io/js/%40bluemarblepayroll%2Fshort-term-memory.svg)](https://badge.fury.io/js/%40bluemarblepayroll%2Fshort-term-memory) [![Build Status](https://travis-ci.org/bluemarblepayroll/short-term-memory.svg?branch=master)](https://travis-ci.org/bluemarblepayroll/short-term-memory) [![Maintainability](https://api.codeclimate.com/v1/badges/33a241c612913e69742d/maintainability)](https://codeclimate.com/github/bluemarblepayroll/short-term-memory/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Very small library that places a layer of abstraction over the browsers built in [Session Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).  This means you can program to this library and it will ensure you do not make any hard links between your application and the browser.  When this is ran outside of a browser then it will polyfill the storage with an in-memory key-value store.
 
